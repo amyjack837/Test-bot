@@ -4,4 +4,8 @@ services:
     env: python
     buildCommand: pip install -r requirements.txt
     startCommand: python main.py
-    autoDeploy: true
+    envVars:
+      - key: BOT_TOKEN
+        sync: false
+    runtime:
+      python_version: 3.10
